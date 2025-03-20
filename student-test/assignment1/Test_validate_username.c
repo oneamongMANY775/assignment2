@@ -1,16 +1,17 @@
+
 #include "unity.h"
 #include <stdbool.h>
 #include "../../examples/autotest-validate/autotest-validate.h"
 #include "../../assignment-autotest/test/assignment1/username-from-conf-file.h"
 #include <stdlib.h>
-
 /**
- * This function validates that:
- * 1) `my_username()` (from autotest-validate.c) returns your hardcoded username.
- * 2) `malloc_username_from_conf_file()` (from username-from-conf-file.h) returns 
- *    the same username stored in conf/username.txt.
- * 3) It compares both values using `TEST_ASSERT_EQUAL_STRING_MESSAGE`.
+ * This function should:
+ *   1) Call the `my_username()` function in `autotest-validate.c` to get your hardcoded username.
+ *   2) Obtain the value returned from `malloc_username_from_conf_file()` (from `username-from-conf-file.h`)
+ *      which retrieves the username from the `conf/username.txt` file.
+ *   3) Use unity assertion `TEST_ASSERT_EQUAL_STRING_MESSAGE` to verify that both strings match.
  */
+
 void test_validate_my_username()
 {
     // Get the hardcoded username
